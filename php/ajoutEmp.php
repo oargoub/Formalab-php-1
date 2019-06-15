@@ -9,6 +9,13 @@ $matricule  = $_GET['matricule'];
 $nom = $_GET['nom'];
 $prenom = $_GET['prenom'];
 
+if (!isset($matricule) and !isset($matricule)and !isset($matricule)){
+
+    echo "vous devez remplir tous les champs";
+    return false;
+   
+}
+    
 //preparation de requette d'insertion
 $requette = "INSERT into emp VALUES ('$matricule','$nom','$prenom')";
 //preparation de requette de mise à jour
@@ -22,7 +29,6 @@ query() , select
 */
 
 $res = $cxBase->exec($requette);//exécution la requete sur la base de donnée ($cxbase)et mettre le résultat dans $res
-$res1 = $cxBase->exec($maj);
 //resultat d'exécution
 if ($res>0) {
     echo "Données inserées avec succcé !";

@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Inscription</title>
@@ -9,9 +10,11 @@
 
 <body>
 
-        <div class="container"> 
-    
-        <form action="../php/ajoutEmp.php" method="GET" name="subscribe" onsubmit="return valider();">
+    <div class="container">
+
+        <form action="../php/controller.php" method="GET" name="subscribe"onsubmit="return valider();">
+
+            <input type="hidden" name="type" value="ajout">
 
             <div class="form-group">
                 <label class="control-label col-sm-2" for="inputMatricule ">matricule :</label>
@@ -34,7 +37,8 @@
             <input type="submit" class="btn btn-primary" value="Submit">
         </form>
 
-</div>
+    </div>
+
     <script src="./../javascript/script.js"></script>
 
 </body>
