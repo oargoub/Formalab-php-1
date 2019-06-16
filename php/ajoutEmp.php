@@ -9,13 +9,13 @@ $matricule  = $_GET['matricule'];
 $nom = $_GET['nom'];
 $prenom = $_GET['prenom'];
 
-if (!isset($matricule) and !isset($matricule)and !isset($matricule)){
+if (  (!ISSET($matricule) || EMPTY($matricule)) || (!ISSET($nom) || EMPTY($nom)) || (!ISSET($prenom) || EMPTY($prenom))   ){
 
-    echo "vous devez remplir tous les champs";
-    return false;
+    die("vous devez remplir tous les champs");
    
 }
-    
+
+   
 //preparation de requette d'insertion
 $requette = "INSERT into emp VALUES ('$matricule','$nom','$prenom')";
 //preparation de requette de mise à jour
@@ -35,5 +35,6 @@ if ($res>0) {
 }else {
     echo "Erreur d'insertion";
 }
+
 
 ?>

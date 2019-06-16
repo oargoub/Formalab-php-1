@@ -18,10 +18,13 @@ function valider() {
 }
 
 function valider1() {
+
+
     if (document.sub.matricule.value.length < 8) {
-        alert('le matricule doit comprter au minimum 8 caractères');
+            alert('le matricule doit comprter au minimum 8 caractères');
         return false;
     }
+
     return true;
    
 }
